@@ -21,15 +21,20 @@ class StoreContrller extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request) // fazer inserção
     {
-        //
+        $data = $request->all(); // pega todos os dados
+
+        Store::create($data); // cria o registro
+
+        return response()->json(['data' => $data]);
+
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $id) // faz de um único item
     {
         //
     }
@@ -37,7 +42,7 @@ class StoreContrller extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $id)  // faz a atualização
     {
         //
     }
@@ -45,7 +50,7 @@ class StoreContrller extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(string $id) // faz a remoção
     {
         //
     }

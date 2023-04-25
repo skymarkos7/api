@@ -20,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('store', [StoreContrller::class, 'index']);
+Route::post('store', [StoreContrller::class, 'store']);
