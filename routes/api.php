@@ -21,3 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('store', [StoreContrller::class, 'index']);
 Route::post('store', [StoreContrller::class, 'store']);
+Route::put('store/{id}', [StoreContrller::class, 'update']);
+Route::delete('store/{id}', [StoreContrller::class, 'destroy']);
